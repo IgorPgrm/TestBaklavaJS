@@ -1,0 +1,110 @@
+.baklava-node-interface.--input[data-interface-type="exec_port"] .__port {
+    /* background-color: green;
+    rotate: 45deg;
+    border-radius: 0%; */
+    background: none; 
+    top: -4.8rem;
+    left: -0.2em;
+    
+    /* background-color: #e28b46;
+    rotate: 45deg;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent white ;
+    border-radius: 5%;
+    margin-block-start: -8px  */
+  
+    /* display: inline-block;
+    font-size: initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-bottom: calc(var(--m) - var(--s) * 0.2886); */
+}
+
+
+.baklava-node-interface.--input.--connected[data-interface-type="exec_port"] .__port::before,
+.baklava-node-interface.--output.--connected[data-interface-type="exec_port"] .__port::before {
+  border-left: 10px solid rgb(255, 255, 255);
+}
+
+.baklava-node-interface[data-interface-type="exec_port"] .__port {
+  background: none; 
+  top: -3.6rem;
+  left: 11.3em;
+}
+
+.baklava-node-interface.--input[data-interface-type="exec_port"] .__port::before,
+.baklava-node-interface.--output[data-interface-type="exec_port"] .__port::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent; /* Размеры треугольника */
+  border-bottom: 6px solid transparent; /* Размеры треугольника */
+  border-left: 10px solid rgb(70, 70, 70); /* Размеры и цвет фона порта */
+  transform: translateY(-50%); /* Поднимаем треугольник на середину порта */
+  margin-right: 2px;
+}
+
+
+.baklava-node-interface[data-interface-type="exec_port"] .__port + .align-middle {
+  background-color: green;
+  position: absolute;
+  margin-top: -34px;
+}
+
+/* Примените этот стиль только к соединениям с атрибутом data-interface-type="string_port" */
+.baklava-connection[data-interface-type="string_port"] {
+  stroke: red !important; /* Замените 'red' на желаемый цвет */
+  stroke-width: 2px !important; /* Замените '2px' на желаемую толщину */
+}
+
+.input_node > .__title {
+  background: rgb(151, 123, 189);
+}
+
+[data-node-type="QueueNode"] .__title {
+  position: relative;
+  color: white; /* Цвет текста */
+}
+
+[data-node-type="QueueNode"] .__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(-90deg, #CF77F3 0%, #009BFF 47%, #2AC9DB 100%);
+  border-radius: 100px;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.baklava-node-interface[data-interface-type="string_port"] .__port {
+    background-color:#FF00E2 !important;
+}
+
+.baklava-node-interface[data-interface-type="integer_port"] .__port {
+background-color: #10FFBC;
+}
+
+.baklava-node-interface[data-interface-type="float_port"] .__port {
+background-color: #38F600;
+}
+
+.baklava-node-interface[data-interface-type="boolean_port"] .__port {
+background-color: #A70008;
+}
+
+.baklava-node-interface[data-interface-type="vector_port"] .__port {
+  background-color: #FCF21E;
+}
+
+.baklava-node-interface[data-interface-type="struct_port"] .__port {
+  background-color: #026BEB;
+}
+
+.baklava-node-interface[data-interface-type="object_port"] .__port {
+  background-color: #00C0FF;
+}
+   
